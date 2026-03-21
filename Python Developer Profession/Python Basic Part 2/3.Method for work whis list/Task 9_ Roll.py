@@ -43,13 +43,27 @@ def forming_list(count_n, thems):
         list_n.append(int(input(f'Размер {thems} {n}: ')))
     return list_n
 
-list_roll = forming_list(int(input('Количество пар:')), 'пары')
+roller_sizes = forming_list(int(input('Количество пар:')), 'пары')
+foot_sizes = forming_list(int(input('Количество людей:')), 'ноги человека')
 
-print(list_roll)
+roller_sizes.sort()
+foot_sizes.sort()
 
-list_people = forming_list(int(input('Количество людей:')), 'ноги человека')
+matched_count = 0
+i = 0
+j = 0
 
-print(list_people)
+while i < len(roller_sizes) and j < len(foot_sizes):
+    if roller_sizes[i] == foot_sizes[j]:
+        matched_count += 1
+        i += 1
+        j += 1
+    elif roller_sizes[i] < foot_sizes[j]:
+        i += 1
+    else:
+        j += 1
+
+"""
 happy = 0
 for roll in list_roll:
     for people in list_people:
@@ -58,6 +72,7 @@ for roll in list_roll:
             list_roll.remove(roll)
             list_people.remove(people)
             break
+"""
 
-print("Наибольшее количество людей, которые могут взять ролики: ", happy)
+print("Наибольшее количество людей, которые могут взять ролики: ", matched_count)
 
