@@ -3,51 +3,7 @@
 При работе с API (application programming interface) сайта биржи по криптовалюте вы получили такие данные в
 виде словаря:
 
-data = {
-"address": "0x544444444444",
-"ETH": {
-"balance": 444,
-"totalIn": 444,
-"totalOut": 4
-},
-"count_txs": 2,
-"tokens": [
-{
-"fst_token_info": {
-"address": "0x44444",
-"name": "fdf",
-"decimals": 0,
-"symbol": "dsfdsf",
-"total_supply": "3228562189",
-"owner": "0x44444",
-"last_updated": 1519022607901,
-"issuances_count": 0,
-"holders_count": 137528,
-"price": False
-},
-"balance": 5000,
-"totalIn": 0,
-"total_out": 0
-},
-{
-"sec_token_info": {
-"address": "0x44444",
-"name": "ggg",
-"decimals": "2",
-"symbol": "fff",
-"total_supply": "250000000000",
-"owner": "0x44444",
-"last_updated": 1520452201,
-"issuances_count": 0,
-"holders_count": 20707,
-"price": False
-},
-"balance": 500,
-"totalIn": 0,
-"total_out": 0
-}
-]
-}
+
 Теперь необходимо обработать эти данные.
 
 Напишите программу, которая выполняет следующий алгоритм действий:
@@ -76,3 +32,50 @@ print(data[‘ключ’][0], type(data[‘ключ’][0]))
 и так далее.
 
 Так вы всегда будете понимать, над каким объектом работаете в данный момент."""
+
+
+data = {
+        "address": "0x544444444444",
+        "ETH": {
+                "balance": 444,
+                "totalIn": 444,
+                "totalOut": 4
+                },
+        "count_txs": 2,
+        "tokens": [
+                    {
+                    "fst_token_info": {
+                                        "address": "0x44444",
+                                        "name": "fdf",
+                                        "decimals": 0,
+                                        "symbol": "dsfdsf",
+                                        "total_supply": "3228562189",
+                                        "owner": "0x44444",
+                                        "last_updated": 1519022607901,
+                                        "issuances_count": 0,
+                                        "holders_count": 137528,
+                                        "price": False
+                                        },
+                    "balance": 5000,
+                    "totalIn": 0,
+                    "total_out": 0
+                    },
+                    {
+                    "sec_token_info": {
+                                        "address": "0x44444",
+                                        "name": "ggg",
+                                        "decimals": "2",
+                                        "symbol": "fff",
+                                        "total_supply": "250000000000",
+                                        "owner": "0x44444",
+                                        "last_updated": 1520452201,
+                                        "issuances_count": 0,
+                                        "holders_count": 20707,
+                                        "price": False
+                                        },
+                    "balance": 500,
+                    "totalIn": 0,
+                    "total_out": 0
+                    }
+                ]
+        }
